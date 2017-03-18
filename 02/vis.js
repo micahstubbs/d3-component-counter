@@ -19,12 +19,13 @@ const buttonPanel = d3.component('div', 'button-panel')
   .render(function (d) {
     d3.select(this).call(button, [
       {
-        text: '+',
-        onClick: d.actions.increment,
-      }, {
         text: '-',
         onClick: d.actions.decrement,
       },
+      {
+        text: '+',
+        onClick: d.actions.increment,
+      }, 
     ]);
   });
 
