@@ -15,7 +15,3 @@ The following components are defined and used to construct the app:
 Built with [blockbuilder.org](http://blockbuilder.org)
 
 forked from <a href='http://bl.ocks.org/curran/'>curran</a>'s block: <a href='http://bl.ocks.org/curran/593ffae30c42789a9af36f08c983867e'>Stopwatch</a>
-
-<!-- Start of SimpleHitCounter Code -->
-<div align="center"><img src="http://simplehitcounter.com/hit.php?uid=2238970&f=16777215&b=0" border="0" height="18" width="83"></a><br></div>
-<!-- End of SimpleHitCounter Code -->
