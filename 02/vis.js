@@ -2,22 +2,22 @@
 
 // A component that renders the count.
 const countDisplay = d3.component('div', 'count-display')
-  .render(function (d) {
-    d3.select(this).text(d.count);
+  .render(function (selection, d) {
+    selection.text(d.count);
   });
 
 // A generic Button component.
 const button = d3.component('button')
-  .render(function (d) {
-    d3.select(this)
-        .text(d.text)
-        .on('click', d.onClick);
+  .render(function (selection, d) {
+    selection
+      .text(d.text)
+      .on('click', d.onClick);
   });
 
 // The panel that contains the two buttons.
 const buttonPanel = d3.component('div', 'button-panel')
-  .render(function (d) {
-    d3.select(this).call(button, [
+  .render(function (selection, d) {
+    selection.call(button, [
       {
         text: '-',
         onClick: d.actions.decrement,
@@ -31,10 +31,10 @@ const buttonPanel = d3.component('div', 'button-panel')
 
 // The top-level app component.
 const app = d3.component('div')
-  .render(function (d) {
-    d3.select(this)
-        .call(countDisplay, d)
-        .call(buttonPanel, d);
+  .render(function (selection, d) {
+    selection
+      .call(countDisplay, d)
+      .call(buttonPanel, d);
   });
 
 function main() {
